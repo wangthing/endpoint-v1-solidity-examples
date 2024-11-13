@@ -149,14 +149,14 @@ module.exports = {
             accounts: accounts(),
         },
         "bsc-testnet": {
-            url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+            url: "https://data-seed-prebsc-2-s2.bnbchain.org:8545",
             chainId: 97,
-            accounts: accounts(),
+            accounts: [`0x${SEPOLIA_PRIVATE_KEY}`]
         },
         fuji: {
             url: `https://api.avax-test.network/ext/bc/C/rpc`,
             chainId: 43113,
-            accounts: accounts(),
+            accounts: [`0x${SEPOLIA_PRIVATE_KEY}`]
         },
         mumbai: {
             url: "https://rpc-mumbai.maticvigil.com/",
@@ -184,6 +184,10 @@ module.exports = {
         },
         "op-sepolia": {
             url: `https://optimism-sepolia.infura.io/v3/${INFURA_API_KEY}`,
+            accounts: [`0x${SEPOLIA_PRIVATE_KEY}`],
+        },
+        "arb-sepolia": {
+            url: `https://arbitrum-sepolia.infura.io/v3/${INFURA_API_KEY}`,
             accounts: [`0x${SEPOLIA_PRIVATE_KEY}`],
         }
     },
