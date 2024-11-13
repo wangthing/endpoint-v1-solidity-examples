@@ -17,6 +17,6 @@
   "meter-testnet":    10156,
   "zksync-testnet":   10165,
   "sepolia": 40161,
-  "op-sepolia": 40232,
-  "arb-sepolia": 40231
+  "op-sepolia": 10232,
+  "base-sepolia": 10245
 }

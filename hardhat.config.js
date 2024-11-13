@@ -12,6 +12,7 @@ require("hardhat-deploy-ethers")
 require("@openzeppelin/hardhat-upgrades")
 require("./tasks")
 const { SEPOLIA_PRIVATE_KEY, INFURA_API_KEY } = process.env;
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -184,6 +185,10 @@ module.exports = {
         },
         "op-sepolia": {
             url: `https://optimism-sepolia.infura.io/v3/${INFURA_API_KEY}`,
+            accounts: [`0x${SEPOLIA_PRIVATE_KEY}`],
+        },
+        "base-sepolia": {
+            url: `https://base-sepolia.infura.io/v3/${INFURA_API_KEY}`,
             accounts: [`0x${SEPOLIA_PRIVATE_KEY}`],
         },
         "arb-sepolia": {
